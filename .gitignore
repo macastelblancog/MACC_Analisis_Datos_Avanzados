@@ -1,1 +1,2 @@
-./TALLER01/data
+# .gitignore
+TALLER01/data/taller1.txt

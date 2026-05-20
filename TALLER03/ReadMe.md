@@ -25,11 +25,13 @@ Tomando logaritmo y exponenciando:
 
 $$p(x|\pi) = \exp\!\left(\log\!\left(\pi^x \cdot (1-\pi)^{1-x}\right)\right)$$
 
-$$= \exp\!\left(x \cdot \log(\pi) + (1-x) \cdot \log(1-\pi)\right)$$
+$$p(x|\pi) = \exp\!\left(x \cdot \log(\pi) + (1-x) \cdot \log(1-\pi)\right)$$
 
-$$= \exp\!\left(x \cdot \left(\log(\pi) - \log(1-\pi)\right) + \log(1-\pi)\right)$$
+Agrupando términos
 
-$$= \exp\!\left(x \cdot \log\!\left(\frac{\pi}{1-\pi}\right) + \log(1-\pi)\right)$$
+$$p(x|\pi) = \exp\!\left(x \cdot \left(\log(\pi) - \log(1-\pi)\right) + \log(1-\pi)\right)$$
+
+$$p(x|\pi) = \exp\!\left(x \cdot \log\!\left(\frac{\pi}{1-\pi}\right) + \log(1-\pi)\right)$$
 
 Identificando los componentes de la familia exponencial:
 
@@ -50,11 +52,15 @@ Por tanto, $\text{Bernoulli}(\pi)$ pertenece a la familia exponencial.
 
 Sea $X \sim \mathcal{N}(\mu, \sigma^2)$ con $\sigma^2$ conocido:
 
-$$p(x|\mu) = \frac{1}{\sqrt{2\pi\sigma^2}} \cdot \exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$$
+$$p(x|\mu) = \frac{1}{\sqrt{2 \cdot \pi \cdot\sigma^2}} \cdot \exp\!\left(-\frac{(x-\mu)^2}{2\sigma^2}\right)$$
 
 Expandiendo el cuadrado en el exponente:
 
-$$= \frac{1}{\sqrt{2\pi\sigma^2}} \cdot \exp\!\left(-\frac{x^2}{2\sigma^2}\right) \cdot \exp\!\left(\frac{\mu \cdot x}{\sigma^2} - \frac{\mu^2}{2\sigma^2}\right)$$
+$$p(x|\mu) = \frac{1}{\sqrt{2\cdot\pi\cdot\sigma^2}} \cdot \exp\!\left(-\frac{x^2}{2\sigma^2}+ \frac{2\cdot\mu \cdot x}{2\cdot\sigma^2} - \frac{\mu^2}{2\sigma^2}\right)$$
+
+Agrupando términos:
+
+$$p(x|\mu) = \frac{1}{\sqrt{2\cdot\pi\cdot\sigma^2}} \cdot \exp\!\left(-\frac{x^2}{2\sigma^2}\right) \cdot \exp\!\left(\frac{\mu \cdot x}{\sigma^2} - \frac{\mu^2}{2\sigma^2}\right)$$
 
 Identificando los componentes:
 
@@ -77,7 +83,13 @@ Sea $X \sim \text{Poisson}(\lambda)$, con $x \in \{0,1,2,\ldots\}$:
 
 $$p(x|\lambda) = \frac{\lambda^x \cdot e^{-\lambda}}{x!}$$
 
-$$= \frac{1}{x!} \cdot \exp\!\bigl(x \cdot \log(\lambda)\bigr) \cdot \exp(-\lambda) = \frac{1}{x!} \cdot \exp\!\bigl(x \cdot \log(\lambda) - \lambda\bigr)$$
+Aplicando propiedades de logartímos
+
+$$p(x|\lambda) = \frac{1}{x!} \cdot \exp\!\bigl( \log(\lambda^x)\bigr) \cdot \exp(-\lambda) $$
+
+$$p(x|\lambda) = \frac{1}{x!} \cdot \exp\!\bigl(x \cdot \log(\lambda)\bigr) \cdot \exp(-\lambda) $$
+
+$$p(x|\lambda) = \frac{1}{x!} \cdot \exp\!\bigl(x \cdot \log(\lambda) - \lambda\bigr)$$
 
 Identificando los componentes:
 

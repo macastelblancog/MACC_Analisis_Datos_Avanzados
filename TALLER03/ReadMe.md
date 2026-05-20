@@ -2,6 +2,7 @@
 
 **Autores:** Miguel Ángel Castelblanco García · Luis Gabriel Durán Fernández
 
+Repositio [Taller 03](https://github.com/macastelblancog/MACC_Analisis_Datos_Avanzados/tree/main/TALLER03)
 ---
 ## Problema 1 — Familia Exponencial (20 pts)
 
